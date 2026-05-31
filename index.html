@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>To My Sweetuu ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#080808;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#c8a96b;
+    border-radius:20px;
+}
+
+/* ---------- BACKGROUND ---------- */
+
+.stars{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute;
+    color:#d4af37;
+    animation:twinkle 4s infinite;
+}
+
+@keyframes twinkle{
+    50%{
+        opacity:.2;
+        transform:scale(.7);
+    }
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:40px;
+}
+
+.hero h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:6rem;
+    color:#e7c67a;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.5rem;
+    line-height:1.8;
+    max-width:800px;
+    opacity:.95;
+}
+
+/* Added styling specifically for your main top photo */
+.hero-main-photo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 20px;
+    margin-top: 30px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.hero-btn{
+    margin-top:45px;
+    padding:18px 40px;
+    border-radius:50px;
+    text-decoration:none;
+    color:black;
+    background:#e7c67a;
+    font-weight:600;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-4px);
+}
+
+/* ---------- GENERAL ---------- */
+
+section{
+    padding:120px 12%;
+}
+
+.section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size:4rem;
+    color:#e7c67a;
+    margin-bottom:50px;
+}
+
+.glass{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+}
+
+/* ---------- LETTER ---------- */
+
+.letter{
+    max-width:950px;
+    margin:auto;
+    padding:45px;
+    line-height:2.2;
+    font-size:1.1rem;
+}
+
+.letter p{
+    margin-bottom:20px;
+}
+
+/* ---------- LOVE QUOTE ---------- */
+
+.big-quote{
+    min-height:70vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.big-quote h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:5rem;
+    color:#e7c67a;
+    max-width:900px;
+    line-height:1.3;
+}
+
+/* ---------- TIMELINE ---------- */
+
+.timeline{
+    display:grid;
+    gap:20px;
+}
+
+.timeline-item{
+    padding:25px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(212,175,55,0.15);
+    transition:.3s;
+}
+
+.timeline-item:hover{
+    transform:translateY(-5px);
+}
+
+/* ---------- COUNTER ---------- */
+
+.counter-section{
+    text-align:center;
+}
+
+.counter-number{
+    font-size:6rem;
+    color:#e7c67a;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.counter-label{
+    font-size:1.4rem;
+    margin-top:10px;
+}
+/* ---------- GALLERY ---------- */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.photo-card{
+    height:auto;
+    border-radius:25px;
+    overflow:hidden;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:.4s;
+}
+
+.photo-card:hover{
+    transform:translateY(-8px) rotate(-1deg);
+}
+
+/* Sizing rules to make your pictures fit nicely in the frames */
+.photo-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.photo-placeholder{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#c8a96b;
+    font-size:1.2rem;
+}
+
+/* ---------- LOVE WORDS ---------- */
+
+.love-words{
+    text-align:center;
+    min-height:50vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.love-words h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:5rem;
+    color:#e7c67a;
+}
+
+/* ---------- NOTES ---------- */
+
+.notes-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.note{
+    padding:22px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.08);
+    transition:.3s;
+}
+
+.note:hover{
+    transform:translateY(-5px);
+}
+
+.note p{
+    font-size:1.05rem;
+}
+
+/* ---------- FINAL ---------- */
+
+.final-section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.final-box{
+    max-width:900px;
+}
+
+.final-box h2{
+    font-family:'Cormorant Garamond',serif;
+    color:#e7c67a;
+    font-size:5rem;
+    margin-bottom:30px;
+}
+
+.final-box p{
+    font-size:1.3rem;
+    line-height:2;
+}
+
+/* ---------- FADE ---------- */
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:4rem;
+}
+
+.big-quote h2{
+    font-size:3rem;
+}
+
+.section-title{
+    font-size:3rem;
+}
+
+.love-words h2{
+    font-size:3rem;
+}
+
+.counter-number{
+    font-size:4rem;
+}
+
+.final-box h2{
+    font-size:3rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<section class="hero">
+
+<h1>To My Sweetuu ❤️</h1>
+
+<p>
+If you ever wonder how much you mean to me,
+<br>
+this is my answer honey.
+</p>
+
+<img src="images/main.jpg" alt="Main Photo" class="hero-main-photo">
+
+</section>
+
+<section class="big-quote fade">
+
+<h2>
+Out of all the people in the world,
+somehow my heart found its way to you.
+</h2>
+
+</section>
+
+<section id="letter" class="fade">
+
+<h2 class="section-title">
+💌 To My Dearest Love
+</h2>
+
+<div class="letter glass">
+
+<p>
+My Sweetuu,
+</p>
+
+<p>
+If I'm honest, I don't think words will ever be enough to explain what you mean to me.
+</p>
+
+<p>
+You became the person I want to tell everything to.
+The person whose message can instantly make my day better.
+The person who somehow makes even ordinary moments feel special.
+</p>
+
+<p>
+I love your eyes, because I could get lost in them forever.
+</p>
+
+<p>
+I love your smile, because it carries a happiness that reaches me even through a screen.
+</p>
+
+<p>
+I love your voice, because somehow it always feels like home.
+</p>
+
+<p>
+I love the way you roll your eyes at me when I say something silly.
+</p>
+
+<p>
+I love the cute face you make when you're angry.
+</p>
+<p>
+I even love the times you pretend to be mad at me,
+because somehow you still manage to be adorable.
+</p>
+
+<p>
+But more than anything else,
+I love your heart.
+Your kindness.
+Your support.
+Your care.
+The way you stand by me.
+The way you make me feel loved.
+</p>
+
+<p>
+Thank you for every laugh,
+every conversation,
+every memory,
+and every moment you've shared with me.
+</p>
+
+<p>
+Meeting you was one of the best things
+that has ever happened to me.
+</p>
+
+<p>
+And if I had to choose all over again,
+I would still choose you.
+</p>
+
+<p>
+Every single time. ❤️
+</p>
+
+</div>
+
+</section>
+
+<section class="fade">
+
+<h2 class="section-title">
+🗓️ How Can I Forget The Best Moments Of My Life
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+❤️ 17 January 2025 — The day we first met.
+</div>
+
+<div class="timeline-item">
+🎬 14 February 2025 — Our first movie date.
+</div>
+
+<div class="timeline-item">
+🎉 We celebrated our birthdays together.
+</div>
+
+<div class="timeline-item">
+🌹 Every Wednesday — Flowers Day.
+</div>
+
+<div class="timeline-item">
+📱 Late-night video calls.
+</div>
+
+<div class="timeline-item">
+🥰 You waiting for me to get back home safely.
+</div>
+
+<div class="timeline-item">
+😴 Falling asleep together on call.
+</div>
+
+<div class="timeline-item">
+🎉 Celebrating monthsaries and each other's wins.
+</div>
+
+<div class="timeline-item">
+📱 Us playing Roblox and other games.
+</div>
+
+<div class="timeline-item">
+✨ Creating so many beautiful memories together,making it so special❤️
+</div>
+
+</div>
+
+</section>
+
+<section class="counter-section fade">
+
+<h2 class="section-title">
+⏳ We've Been Making Such Beautiful Memories For
+</h2>
+
+<div id="daysCounter" class="counter-number">
+0
+</div>
+
+<div class="counter-label">
+Days Since We Met ❤️
+</div>
+
+</section>
+
+<section class="love-words fade">
+
+<h2 id="changingText">
+I Love Your Eyes
+</h2>
+
+</section>
+
+<section class="fade">
+
+
+
+<div class="gallery">
+
+<div class="photo-card">
+    <img src="images/photo3.jpg" alt="Memory 3">
+</div>
+
+<div class="photo-card">
+    <img src="images/photo1.jpg" alt="Memory 1">
+</div>
+
+<div class="photo-card">
+    <img src="images/photo5.jpg" alt="Memory 5">
+</div>
+
+<div class="photo-card">
+    <img src="images/photo2.jpg" alt="Memory 2">
+</div>
+
+<div class="photo-card">
+    <img src="images/photo4.jpg" alt="Memory 4">
+</div>
+
+<div class="photo-card">
+    <img src="images/photo7.jpg" alt="Memory 7">
+</div>
+
+<div class="photo-card">
+    <img src="images/photo6.jpg" alt="Memory 6">
+</div>
+
+<div class="photo-card">
+    <img src="images/photo8.jpg" alt="Memory 8">
+</div>
+
+</div>
+
+</section>
+
+<section class="fade">
+
+<h2 class="section-title">
+💕 Things we say instead of  "I Love You" 
+</h2>
+
+<div class="notes-grid">
+
+<div class="note">
+<p>🥺 I love you moreeessstttt.</p>
+</div>
+
+<div class="note">
+<p>💕 I miss you.</p>
+</div>
+
+<div class="note">
+<p>📲 Update me when you're free na.</p>
+</div>
+
+<div class="note">
+<p>🫶 Stay safe hmm.</p>
+</div>
+
+<div class="note">
+<p>💖 Can we sleep on call?</p>
+</div>
+
+<div class="note">
+<p>📱 Can we call?</p>
+</div>
+
+<div class="note">
+<p>🌹 Happy Flowers Day, my love.</p>
+</div>
+
+<div class="note">
+<p>🏍️ Drive safely.</p>
+</div>
+
+<div class="note">
+<p>💕 Please take care.</p>
+</div>
+
+<div class="note">
+<p>❤️ Dada loves you.</p>
+</div>
+
+<div class="note">
+<p>😘 Muah.</p>
+</div>
+
+<div class="note">
+<p>💕 Mahal kita.</p>
+</div>
+
+<div class="note">
+<p>🍽️ Eat well my love.</p>
+</div>
+
+<div class="note">
+<p>😴 Sleep well po.</p>
+</div>
+
+<div class="note">
+<p>🤟🏻 I Love You</p>
+</div>
+
+<div class="note">
+<p>🌹 I wish we were together.</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="final-section fade">
+
+<div class="final-box">
+
+<h2>
+❤️
+</h2>
+
+<p>
+
+And if you ever wonder whether I'd choose you again...
+
+<br><br>
+
+the answer will always be a huge YES.
+
+<br><br>
+
+No matter how many times we fight,
+how many times we disagree...
+
+<br><br>
+
+you will always be the best thing
+that has ever happened to me,the sweetest choice of my life.
+
+<br><br>
+
+Thank you for coming into my life like a blessing. I LOVE YOU MORE ALWAYS❤️ 
+
+<br><br>
+
+Forever Yours,
+
+<br>
+
+Arjun ❤️
+
+</p>
+
+</div>
+
+</section>
+
+<script>
+
+/* ---------- STARS ---------- */
+
+const starsContainer = document.getElementById("stars");
+
+for(let i = 0; i < 150; i++){
+
+    const star = document.createElement("div");
+
+    star.classList.add("star");
+
+    star.innerHTML = "✦";
+
+    star.style.left = Math.random() * 100 + "vw";
+
+    star.style.top = Math.random() * 100 + "vh";
+
+    star.style.animationDelay = Math.random() * 4 + "s";
+
+    starsContainer.appendChild(star);
+
+}
+
+/* ---------- COUNTER ---------- */
+
+const startDate = new Date("2025-01-17");
+
+function updateCounter(){
+
+    const now = new Date();
+
+    const diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+    document.getElementById("daysCounter").innerText = days;
+
+}
+
+updateCounter();
+
+/* ---------- TEXT CHANGE ---------- */
+
+const texts = ["I Love Your Eyes", "I Love Your Smile", "I Love Your Voice", "I Love Everything About You"];
+
+let currentIndex = 0;
+
+setInterval(() => {
+
+    currentIndex = (currentIndex + 1) % texts.length;
+
+    const el = document.getElementById("changingText");
+
+    el.style.opacity = 0;
+
+    setTimeout(() => {
+
+        el.innerText = texts[currentIndex];
+
+        el.style.opacity = 1;
+
+    }, 500);
+
+}, 3000);
+
+/* ---------- FADE ON SCROLL ---------- */
+
+const fades = document.querySelectorAll(".fade");
+
+const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+        if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, { threshold: 0.1 });
+
+fades.forEach(f => observer.observe(f));
+
+</script>
+</body>
+</html>
